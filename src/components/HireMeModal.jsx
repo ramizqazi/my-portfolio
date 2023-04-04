@@ -6,8 +6,6 @@ import Button from './reusable/Button';
 const selectOptions = [
 	'Web Application',
 	'Mobile Application',
-	'UI/UX Design',
-	'Branding',
 ];
 
 const HireMeModal = ({ onClose, onRequest }) => {
@@ -101,15 +99,7 @@ const HireMeModal = ({ onClose, onRequest }) => {
 									<span
 										onClick={onClose}
 										type="submit"
-										className="px-4
-											sm:px-6
-											py-2
-											sm:py-2.5
-											text-white
-											bg-indigo-500
-											hover:bg-indigo-600
-											rounded-md
-											focus:ring-1 focus:ring-indigo-900 duration-500"
+										className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
 										aria-label="Submit Request"
 									>
 										<Button title="Send Request" />

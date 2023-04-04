@@ -98,28 +98,31 @@ const ProjectsGrid = () => {
 				{selectProject
 					? selectProjectsByCategory.map((project) => (
 							<ProjectSingle
+								id={project.id}
 								title={project.title}
 								category={project.category}
 								image={project.img}
 								key={project.id}
-							/>
-					  ))
-					: searchProject
-					? searchProjectsByTitle.map((project) => (
-							<ProjectSingle
-								title={project.title}
-								category={project.category}
-								image={project.img}
-								key={project.id}
-							/>
-					  ))
-					: projects.map((project) => (
-							<ProjectSingle
-								title={project.title}
-								category={project.category}
-								image={project.img}
-								key={project.id}
-							/>
+								/>
+								))
+								: searchProject
+								? searchProjectsByTitle.map((project) => (
+								<ProjectSingle
+									id={project.id}
+									title={project.title}
+									category={project.category}
+									image={project.img}
+									key={project.id}
+								/>
+									))
+									: projects.map((project) => (
+										<ProjectSingle
+										id={project.id}
+										title={project.title}
+										category={project.category}
+										image={project.img}
+										key={project.id}
+									/>
 					  ))}
 			</div>
 		</section>

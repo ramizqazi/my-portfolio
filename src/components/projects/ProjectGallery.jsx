@@ -1,6 +1,7 @@
 "use client"
 import { useContext } from 'react';
 import SingleProjectContext from '../../context/SingleProjectContext';
+import Image from 'next/image';
 
 const ProjectGallery = () => {
 	const { singleProjectData } = useContext(SingleProjectContext);
@@ -10,7 +11,7 @@ const ProjectGallery = () => {
 			{singleProjectData.ProjectImages.map((project) => {
 				return (
 					<div className="mb-10 sm:mb-0" key={project.id}>
-						<img
+						<Image
 							src={project.img}
 							className="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
 							alt={project.title}
