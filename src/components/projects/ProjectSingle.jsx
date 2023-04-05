@@ -3,16 +3,31 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
+const animation = {
+  hidden: {
+    opacity: 0,
+		y: -40 
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      ease: 'easeInOut', duration: 0.5
+    },
+  },
+};
+
 const ProjectSingle = ({ id, title, category, image }) => {
 	return (
 		<motion.div
-			initial={{ opacity: 0 }}
-			animate={{ opacity: 1, delay: 1 }}
-			transition={{
-				ease: 'easeInOut',
-				duration: 0.7,
-				delay: 0.15,
-			}}
+			initial="hidden"
+			whileInView="show"
+			variants={animation}
+			// transition={{
+			// 	ease: 'easeInOut',
+			// 	duration: 0.7,
+			// 	delay: 0.15,
+			// }}
 		>
 			<Link href={`/projects/${id}`} aria-label="Single Project">
 				<div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">

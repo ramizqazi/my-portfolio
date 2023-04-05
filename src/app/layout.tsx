@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-				<AnimatePresence>
+				<AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
 					<div className=" bg-secondary-light dark:bg-primary-dark transition duration-300">
 							<AppHeader />
 							<Suspense fallback={""}>

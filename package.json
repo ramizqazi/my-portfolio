@@ -15,7 +15,7 @@
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
     "file-saver": "^2.0.5",
-    "framer-motion": "4.1.17",
+    "framer-motion": "7.6.7",
     "next": "13.2.4",
     "postcss-cli": "^10.1.0",
     "react": "18.2.0",
