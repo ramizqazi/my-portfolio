@@ -15,28 +15,14 @@ const ProjectInfo = () => {
 					</p>
 					<ul className="leading-loose">
 						{singleProjectData.ProjectInfo.CompanyInfo.map(
-							(info) => {
-								return (
+							(info) => (
 									<li
 										className="font-general-regular text-ternary-dark dark:text-ternary-light"
 										key={info.id}
 									>
-										<span>{info.title}: </span>
-										<a
-											href="https://stoman.me"
-											className={
-												info.title === 'Website' ||
-												info.title === 'Phone'
-													? 'hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300'
-													: ''
-											}
-											aria-label="Project Website and Phone"
-										>
-											{info.details}
-										</a>
+										<span>{`${info.title}: ${info.details}`}</span>
 									</li>
-								);
-							}
+								)
 						)}
 					</ul>
 				</div>
@@ -63,31 +49,6 @@ const ProjectInfo = () => {
 					</p>
 				</div>
 
-				{/* Single project social sharing */}
-				<div>
-					<p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
-						{singleProjectData.ProjectInfo.SocialSharingHeading}
-					</p>
-					<div className="flex items-center gap-3 mt-5">
-						{singleProjectData.ProjectInfo.SocialSharing.map(
-							(social) => {
-								return (
-									<a
-										key={social.id}
-										href={social.url}
-										target="__blank"
-										aria-label="Share Project"
-										className="bg-ternary-light dark:bg-ternary-dark text-gray-400 hover:text-primary-dark dark:hover:text-primary-light p-2 rounded-lg shadow-sm duration-500"
-									>
-										<span className="text-lg lg:text-2xl">
-											{social.icon}
-										</span>
-									</a>
-								);
-							}
-						)}
-					</div>
-				</div>
 			</div>
 
 			{/*  Single project right section */}

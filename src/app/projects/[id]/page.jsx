@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import ProjectGallery from '../../../components/projects/ProjectGallery';
 import ProjectHeader from '../../../components/projects/ProjectHeader';
 import ProjectInfo from '../../../components/projects/ProjectInfo';
-import ProjectRelatedProjects from '../../../components/projects/ProjectRelatedProjects';
+// import ProjectRelatedProjects from '../../../components/projects/ProjectRelatedProjects';
 import { SingleProjectProvider } from '../../../context/SingleProjectContext';
 
 const ProjectSingle = () => {
@@ -23,7 +23,7 @@ const ProjectSingle = () => {
 				<ProjectHeader />
 				<ProjectGallery />
 				<ProjectInfo />
-				<ProjectRelatedProjects />
+				{/* <ProjectRelatedProjects /> */}
 			</SingleProjectProvider>
 		</motion.div>
 	);
