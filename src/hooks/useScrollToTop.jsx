@@ -9,7 +9,9 @@ const useScrollToTop = () => {
 	const [showScroll, setShowScroll] = useState(false);
 
 	useEffect(() => {
-		window.addEventListener('scroll', scrollToTop);
+		if(window) {
+			window.addEventListener('scroll', scrollToTop);
+		}
 		return function cleanup() {
 			window.removeEventListener('scroll', scrollToTop);
 		};
@@ -30,7 +32,7 @@ const useScrollToTop = () => {
 		});
 	};
 
-	window.addEventListener('scroll', scrollToTop);
+	// window.addEventListener('scroll', scrollToTop);
 
 	return (
 		<>
