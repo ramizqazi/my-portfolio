@@ -9,10 +9,6 @@ export const aboutMeData = [
 	},
 	{
 		id: 3,
-		bio: 'I am also a student in PIAIC whrere i am learning python, blockchain and data science technologies and i will be offering my services in these technologies aswell in the near future.',
-	},
-	{
-		id: 3,
 		bio: 'Thanks for visiting my portfolio. If you want to your app/website click on hire me.',
 	},
 ];
