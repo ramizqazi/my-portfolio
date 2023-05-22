@@ -18,16 +18,12 @@ const animation = {
 };
 
 const ProjectSingle = ({ id, title, category, image }) => {
+	console.log(image)
 	return (
 		<motion.div
 			initial="hidden"
 			whileInView="show"
 			variants={animation}
-			// transition={{
-			// 	ease: 'easeInOut',
-			// 	duration: 0.7,
-			// 	delay: 0.15,
-			// }}
 		>
 			<Link href={`/projects/${id}`} aria-label="Single Project">
 				<div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
