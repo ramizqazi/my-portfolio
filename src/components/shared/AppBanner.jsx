@@ -55,7 +55,7 @@ const AppBanner = () => {
 					className="flex justify-center sm:block"
 				>
 					<a
-						href="https://drive.google.com/file/d/1-bowRN4kFTsXfXmvWAedCHDNKEtYGzyy/view"
+						href="https://drive.google.com/file/d/1QlJIr2vl17sOBwEPV1DPJwAg9zc1VKHf/view"
 						target='blank'
 						className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-12 mb-6 sm:mb-0 text-lg border border-indigo-200 dark:border-ternary-dark py-2.5 sm:py-3 shadow-lg rounded-lg bg-indigo-50 focus:ring-1 focus:ring-indigo-900 hover:bg-indigo-500 text-gray-500 hover:text-white duration-500"
 						aria-label="Download Resume"

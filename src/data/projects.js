@@ -22,14 +22,26 @@ export const projectsData = [
 			tags: 'UI / Frontend',
 		},
 		details: {
-			projectDescription: 'The Discreedly app is designed to help HCPs and MSLs manage their daily tasks more efficiently. The app will provide a platform for HCPs and MSLs to communicate with each other, share information, and collaborate on projects. The app will also provide access to the latest medical research, clinical trials, and other relevant information. {break} The app will be available on both iOS and Android platforms. It will be designed to be user-friendly and intuitive, with a simple interface that is easy to navigate. The app will also be customizable, allowing users to tailor it to their specific needs.',			
+			projectDescription: 'The Discreedly app is designed to help HCPs and MSLs manage their daily tasks more efficiently. The app will provide a platform for HCPs and MSLs to communicate with each other, share information, and collaborate on projects. The app will also provide access to the latest medical research, clinical trials, and other relevant information.',			
 			features: [
 				'Secure messaging platform for HCPs and MSLs to communicate with each other',
 				'Access to the latest medical research, clinical trials, and other relevant information',
 				'Customizable dashboard that allows users to tailor the app to their specific needs',
 				'Task management system that helps users manage their daily tasks more efficiently'
 			]
-		}
+		},
+		technologies:
+			{
+				title: 'Tools & Technologies',
+				techs: [
+					'HTML',
+					'CSS',
+					'JavaScript',
+					'React.js',
+					'TailwindCSS',
+					'AdobeXD',
+				],
+			},
 	},
 	{
 		id: 2,
@@ -50,7 +62,19 @@ export const projectsData = [
 				'Ratings and reviews',
 				'Real-time GPS tracking'
 			]
-		}
+		},
+		technologies:
+			{
+				title: 'Tools & Technologies',
+				techs: [
+					'HTML',
+					'CSS',
+					'JavaScript',
+					'React Native',
+					'Styled Components',
+					'AdobeXD',
+				],
+			},
 	},
 	{
 		id: 3,
@@ -63,13 +87,25 @@ export const projectsData = [
 			tags: 'UI / Frontend',
 		},
 		details: {
-			projectDescription: 'Memoree is an app that allows you to create collections of images and organize them. You can add images to the app and create collections of images. The app also allows you to organize your images by creating folders and subfolders. You can also add tags to your images to make them easier to find later on',			
+			projectDescription: 'Memoree is an app that allows you to create collections of images and organize them. You can add images to the app and create collections of images. The app also allows you to organize your images by creating folders and subfolders. You can also add tags to your images to make them easier to find later on.',			
 			features: [
 				'Create collections of images',
 				'Organize images by creating folders and subfolders',
 				'Add tags to images to make them easier to find later on',
 			]
-		}
+		},
+		technologies:
+			{
+				title: 'Tools & Technologies',
+				techs: [
+					'HTML',
+					'CSS',
+					'JavaScript',
+					'React Native',
+					'Styled Components',
+					'AdobeXD',
+				],
+			},
 	},
 	{
 		id: 4,
@@ -88,7 +124,19 @@ export const projectsData = [
 				'Get alerts notifications when someone is detected in the camera',
 				'Multi-language support',
 			]
-		}
+		},
+		technologies:
+			{
+				title: 'Tools & Technologies',
+				techs: [
+					'HTML',
+					'CSS',
+					'JavaScript',
+					'React Native',
+					'Styled Components',
+					'AdobeXD',
+				],
+			},
 	},
 	{
 		id: 6,
@@ -107,6 +155,18 @@ export const projectsData = [
 				'Google Ads Integration',
 				'Auto-Share to Twitter',
 			]
-		}
+		},
+		technologies:
+			{
+				title: 'Tools & Technologies',
+				techs: [
+					'HTML',
+					'CSS',
+					'JavaScript',
+					'React Native',
+					'Styled Components',
+					'AdobeXD',
+				],
+			},
 	},
 ];

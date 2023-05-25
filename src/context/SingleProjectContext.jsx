@@ -1,17 +1,19 @@
 "use client"
 import { useState, createContext } from 'react';
-import { singleProjectData as singleProjectDataJson } from '../data/singleProjectData';
+import { projectsData } from '../data/projects';
+import { usePathname } from 'next/navigation';
 
 const SingleProjectContext = createContext();
 
 export const SingleProjectProvider = ({ children }) => {
-	const [singleProjectData, setSingleProjectData] = useState(
-		singleProjectDataJson
-	);
+	const pathname = usePathname();
+	const id = Number(pathname.match(/\d+/g)[0]);
+	
+	const singleProjectData = projectsData.find((p) => p.id === id);
 
 	return (
 		<SingleProjectContext.Provider
-			value={{ singleProjectData, setSingleProjectData }}
+			value={{singleProjectData}}
 		>
 			{children}
 		</SingleProjectContext.Provider>

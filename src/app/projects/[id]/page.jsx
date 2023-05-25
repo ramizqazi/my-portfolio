@@ -6,7 +6,6 @@ import ProjectHeader from '../../../components/projects/ProjectHeader';
 import ProjectInfo from '../../../components/projects/ProjectInfo';
 import { SingleProjectProvider } from '../../../context/SingleProjectContext';
 
-
 const ProjectSingle = () => {
 	return (
 		<motion.div
