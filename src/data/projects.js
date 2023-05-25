@@ -9,6 +9,8 @@ import SecurityEye1 from '../images/security-eye-1.png';
 import SecurityEye2 from '../images/security-eye-2.png';
 import SocialJustice1 from '../images/social-justice-1.png';
 import SocialJustice2 from '../images/social-justice-1.png';
+import Reap1 from '../images/reap-1.png';
+import Reap2 from '../images/reap-2.png';
 
 export const projectsData = [
 	{
@@ -139,13 +141,44 @@ export const projectsData = [
 			},
 	},
 	{
-		id: 6,
+		id: 5,
 		title: 'Social Justice',
 		category: 'Mobile Application',
 		images: [SocialJustice1, SocialJustice2],
 		ProjectHeader: {
 			title: 'Front-End Develpement',
 			publishDate: 'Mar 26, 2023',
+			tags: 'UI / Frontend',
+		},
+		details: {
+			projectDescription: 'Social Justice is amobile application designed to empower individuals and promote positive change within society. This app serves as a platform where users can submit actionable items related to social issues, allowing others to take action and raise awareness. With features such as push notifications, Google ads, and auto-sharing to Twitter, Social Justice aims to foster a vibrant community of activists working together to address various concerns.',			
+			features: [	
+				'Push Notifications',
+				'Google Ads Integration',
+				'Auto-Share to Twitter',
+			]
+		},
+		technologies:
+			{
+				title: 'Tools & Technologies',
+				techs: [
+					'HTML',
+					'CSS',
+					'JavaScript',
+					'React Native',
+					'Styled Components',
+					'AdobeXD',
+				],
+			},
+	},
+	{
+		id: 6,
+		title: 'Reap',
+		category: 'Mobile Application',
+		images: [Reap1, Reap2],
+		ProjectHeader: {
+			title: 'Front-End Develpement',
+			publishDate: 'Apr 10, 2023',
 			tags: 'UI / Frontend',
 		},
 		details: {
