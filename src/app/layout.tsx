@@ -1,5 +1,6 @@
 'use client';
 import {AnimatePresence} from 'framer-motion';
+import {Toaster} from 'react-hot-toast';
 import {Suspense} from 'react';
 import {QueryClientProvider} from 'react-query';
 
@@ -25,6 +26,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
             <AppFooter />
             <UseScrollToTop />
           </div>
+          <Toaster />
         </AnimatePresence>
       </body>
     </html>

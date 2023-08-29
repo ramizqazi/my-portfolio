@@ -2,6 +2,7 @@
 import {useRef, useState} from 'react';
 import Button from './reusable/Button';
 import Modal from './reusable/Modal';
+import toast from 'react-hot-toast';
 import emailjs from '@emailjs/browser';
 
 const selectOptions = ['Web Application', 'Mobile Application'];
@@ -26,16 +27,18 @@ const HireMeModal = ({onClose}) => {
         .then(
           result => {
             console.log(result.text);
+            toast.success('Thanks for contacting me I will email you soon!');
           },
           error => {
             console.log(error.text);
+            toast.error(error?.text);
           },
         );
     } catch (e) {
       console.log(e);
     } finally {
       setLoading(false);
-      onClose()
+      onClose();
     }
   };
 

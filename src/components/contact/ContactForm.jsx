@@ -1,6 +1,7 @@
 'use client';
 import {useRef, useState} from 'react';
 import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast';
 import Button from '../reusable/Button';
 import FormInput from '../reusable/FormInput';
 
@@ -12,7 +13,6 @@ const ContactForm = () => {
 
   const _handleSubmit = async e => {
     e.preventDefault();
-		console.log(form.current.subject.value)
 
     try {
       setLoading(true);
@@ -27,9 +27,11 @@ const ContactForm = () => {
         .then(
           result => {
             console.log(result.text);
+            toast.success('Thanks for contacting me I will email you soon!');
           },
           error => {
             console.log(error.text);
+            toast.error(error?.text);
           },
         );
     } catch (e) {
@@ -107,7 +109,7 @@ const ContactForm = () => {
           <div className="font-general-medium w-40 px-4 py-2.5 text-white text-center font-medium tracking-wider bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 rounded-lg mt-6 duration-500">
             <Button
               type="submit"
-							loading={loading}
+              loading={loading}
               title="Send Message"
               aria-label="Send Message"
             />
