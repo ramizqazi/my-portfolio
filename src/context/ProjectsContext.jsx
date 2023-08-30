@@ -17,6 +17,7 @@ export const ProjectsProvider = ({children}) => {
     if (data?.length > 0) {
       setProjects(data);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data?.length]);
 
   // Search projects by project title
