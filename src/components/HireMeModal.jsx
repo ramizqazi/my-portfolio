@@ -43,7 +43,7 @@ const HireMeModal = ({onClose}) => {
   };
 
   return (
-    <Modal title="What project are you looking for?">
+    <Modal title="What project are you looking for?" onClose={onClose}>
       <form
         ref={form}
         onSubmit={e => {
