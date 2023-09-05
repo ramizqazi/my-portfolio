@@ -1,6 +1,7 @@
 'use client';
 import {AnimatePresence} from 'framer-motion';
 import {Toaster} from 'react-hot-toast';
+import {Analytics} from '@vercel/analytics/react';
 import {Suspense} from 'react';
 import {QueryClientProvider} from 'react-query';
 
@@ -22,6 +23,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
             <AppHeader />
             <QueryClientProvider client={queryClient}>
               <Suspense fallback={''}>{children}</Suspense>
+              <Analytics />
             </QueryClientProvider>
             <AppFooter />
             <UseScrollToTop />
