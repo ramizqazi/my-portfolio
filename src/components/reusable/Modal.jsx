@@ -18,7 +18,7 @@ const Modal = ({title, children, onClose}) => {
           <div className="modal max-w-md mx-5 xl:max-w-xl lg:max-w-xl md:max-w-xl bg-secondary-light dark:bg-primary-dark max-h-screen shadow-lg flex-row rounded-lg relative">
             {title && (
               <div className="modal-header flex justify-between gap-10 p-5 border-b border-ternary-light dark:border-ternary-dark">
-                {title}
+                <h2 className='ont-general-semibold text-lg lg:text-lg xl:text-lg text-center sm:text-left text-ternary-dark dark:text-primary-light'>{title}</h2>
                 <button
                   onClick={onClose}
                   className="px-4 font-bold text-primary-dark dark:text-primary-light">

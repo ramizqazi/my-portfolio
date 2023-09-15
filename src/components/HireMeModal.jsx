@@ -1,5 +1,5 @@
 'use client';
-import {useRef, useState} from 'react';
+import { useRef, useState } from 'react';
 import Button from './reusable/Button';
 import Modal from './reusable/Modal';
 import toast from 'react-hot-toast';
@@ -7,7 +7,7 @@ import emailjs from '@emailjs/browser';
 
 const selectOptions = ['Web Application', 'Mobile Application'];
 
-const HireMeModal = ({onClose}) => {
+const HireMeModal = ({ onClose }) => {
   const form = useRef();
   const [loading, setLoading] = useState(false);
 
