@@ -1,5 +1,5 @@
 'use client';
-const selectOptions = ['Web Application', 'Mobile Application', 'UI/UX'];
+const selectOptions = ['Web Application', 'Mobile Application', 'UI Development'];
 
 const ProjectsFilter = ({setSelectProject}) => {
   return (
