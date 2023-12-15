@@ -1,17 +1,16 @@
 'use client';
-import {useState, createContext} from 'react';
-import {aboutMeData} from '../data/aboutMeData';
+import {createContext} from 'react';
+import {aboutMeData, certificationsData} from '../data/aboutMeData';
 
 const AboutMeContext = createContext();
 
 export const AboutMeProvider = ({children}) => {
-  const [aboutMe, setAboutMe] = useState(aboutMeData);
 
   return (
     <AboutMeContext.Provider
       value={{
-        aboutMe,
-        setAboutMe,
+        aboutMe: aboutMeData,
+        certification: certificationsData,
       }}>
       {children}
     </AboutMeContext.Provider>

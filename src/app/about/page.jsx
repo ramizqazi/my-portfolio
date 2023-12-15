@@ -1,8 +1,10 @@
 'use client'
+import { motion } from 'framer-motion';
+
 import AboutMeBio from '../../components/about/AboutMeBio';
 import AboutCounter from '../../components/about/AboutCounter';
 import { AboutMeProvider } from '../../context/AboutMeContext';
-import { motion } from 'framer-motion';
+import AboutCertifications from '@/components/about/AboutCertifications';
 
 const About = () => {
 	return (
@@ -16,13 +18,22 @@ const About = () => {
 				<AboutMeBio />
 			</motion.div>
 
-			{/** Counter without paddings */}
+			{/** Counter */}
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1, delay: 1 }}
 				exit={{ opacity: 0 }}
 			>
 				<AboutCounter />
+			</motion.div>
+
+			{/** Certifications */}
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1, delay: 1 }}
+				exit={{ opacity: 0 }}
+			>
+				<AboutCertifications />
 			</motion.div>
 		</AboutMeProvider>
 	);
