@@ -37,7 +37,7 @@ export const certificationsData = [
 		title: 'Front End Development Libraries',
 		image: 'https://i.pinimg.com/originals/6f/de/93/6fde93bc0a66bc77fdfcf2670d247500.gif',
 		link: 'https://www.freecodecamp.org/certification/ramizqazi/front-end-development-libraries',
-		description: `Explore the world of Front End Development Libraries with this comprehensive course, covering Bootstrap, jQuery, SASS, React, Redux, and Next.js. From enhancing styling and responsiveness using Bootstrap and SASS to dynamic interactivity with jQuery, delve into cutting-edge frameworks like React for building modular and scalable user interfaces. Uncover the power of state management with Redux and advance your skills with Next.js for server-side rendering and routing. This course provides a hands-on journey through the essential tools and libraries shaping modern web development, equipping you with the expertise to create robust and interactive user experiences.`
+		description: `Explore the world of Front End Development Libraries with this comprehensive course, covering Bootstrap, jQuery, SASS, React, Redux, and Next.js. From enhancing styling and responsiveness using Bootstrap and SASS to dynamic interactivity with jQuery, delve into cutting-edge frameworks like React for building modular and scalable user interfaces. Uncover the power of state management with Redux and advance your skills with Next.js for server-side rendering and routing. This course provides a hands-on journey through the essential tools and libraries shaping modern web development.`
 	},
 	{
 		id: 4,
