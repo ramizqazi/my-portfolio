@@ -5,8 +5,9 @@ import Image from 'next/image';
 import { FiArrowDownCircle } from 'react-icons/fi';
 
 // import HeroImg from '../../images/hero-img.png';
-import developerLight from '../../images/developer.svg';
-import developerDark from '../../images/developer-dark.svg';
+// import developerLight from '../../images/developer.svg';
+// import developerDark from '../../images/developer-dark.svg';
+import developer from '../../images/developer-animation.svg';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 
 const AppBanner = () => {
@@ -55,7 +56,7 @@ const AppBanner = () => {
 					className='img'
 					style={{width: '100%'}}
 					src={
-						activeTheme === 'dark' ? developerLight : developerDark
+						developer
 					}
 					alt="Developer"
 				/>
