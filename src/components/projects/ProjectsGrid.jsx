@@ -24,7 +24,17 @@ const ProjectsGrid = () => {
         </p>
       </div>
 
-      <div className="mt-10 sm:mt-16">
+      <div className="mt-5 sm:mt-5">
+        <h3
+          className="font-general-regular 
+            text-center text-secondary-dark
+            dark:text-ternary-light
+            text-sm
+            sm:text-sm
+            mb-3">
+         NOTE: The Projects listed here are all client projects, not practice/learning projects. 
+        <br />These are some of the projects I was allowed to list in my portfolio by my company.
+        </h3>
         <h3
           className="font-general-regular 
             text-center text-secondary-dark
@@ -35,13 +45,7 @@ const ProjectsGrid = () => {
           Search projects by title or filter by category
         </h3>
         <div
-          className="flex
-                        justify-between
-                        border-b border-primary-light
-                        dark:border-secondary-dark
-                        pb-3
-                        gap-3
-                        ">
+          className="flex flex-col sm:flex-row justify-between border-b border-primary-light dark:border-secondary-dark pb-3 gap-3">
           <div className="flex justify-between gap-2">
             <span
               className="
@@ -62,6 +66,8 @@ const ProjectsGrid = () => {
               }}
               className="font-general-medium 
                 pl-3
+                w-full
+                sm:w-auto
                 pr-1
                 sm:px-4
                 py-2
