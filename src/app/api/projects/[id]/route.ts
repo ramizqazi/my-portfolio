@@ -1,3 +1,4 @@
+import {NextResponse} from 'next/server';
 import {client} from '../../../../../sanity/lib/client';
 
 export const GET = async (
@@ -7,5 +8,5 @@ export const GET = async (
   const {id} = params;
   const data = await client.fetch(`*[_type=="project"  && _id=="${id}"][0]`);
 
-  return Response.json(data);
+  return NextResponse.json(data);
 };
