@@ -26,11 +26,9 @@ const HireMeModal = ({ onClose }) => {
         )
         .then(
           result => {
-            console.log(result.text);
             toast.success('Thanks for contacting me I will email you soon!');
           },
           error => {
-            console.log(error.text);
             toast.error(error?.text);
           },
         );

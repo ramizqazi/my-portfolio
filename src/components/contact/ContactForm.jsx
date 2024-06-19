@@ -1,5 +1,5 @@
 'use client';
-import {useRef, useState} from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
 import Button from '../reusable/Button';
@@ -26,11 +26,9 @@ const ContactForm = () => {
         )
         .then(
           result => {
-            console.log(result.text);
             toast.success('Thanks for contacting me I will email you soon!');
           },
           error => {
-            console.log(error.text);
             toast.error(error?.text);
           },
         );

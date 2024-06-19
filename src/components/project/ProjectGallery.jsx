@@ -7,14 +7,15 @@ import Image from 'next/image';
 
 const ProjectGallery = ({ project }) => {
   const [selectedImg, setSelectedImg] = useState(null);
+  const urlImges = project?.images?.map((i) => urlForImage(i)?.url());
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
-      {project?.images?.map((img, index) => {
+      {urlImges?.map((img, index) => {
         return (
           <Image
             key={img}
-            src={urlForImage(img)?.url()}
+            src={img}
             width="500"
             height="200"
             className="rounded-xl h-full cursor-pointer shadow-lg sm:shadow-none"
@@ -27,7 +28,7 @@ const ProjectGallery = ({ project }) => {
       })}
       {!!selectedImg && (
         <ImageViewer
-          src={project?.images}
+          src={urlImges}
           currentIndex={selectedImg - 1}
           onClose={() => setSelectedImg(null)}
           disableScroll={false}
