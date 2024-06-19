@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       <body>
         <div className="bg-secondary-light dark:bg-primary-dark transition duration-300">
           <AppHeader />
-          <Suspense fallback={''}>{children}</Suspense>
+          <Suspense >{children}</Suspense>
           <Analytics />
           <AppFooter />
           <UseScrollToTop />
