@@ -1,18 +1,13 @@
-'use client';
 import Link from 'next/link';
 import AppBanner from '../components/shared/AppBanner';
-import ProjectsGrid from '../components/projects/ProjectsGrid';
-import {ProjectsProvider} from '../context/ProjectsContext';
 import Button from '../components/reusable/Button';
+import Projects from '../components/projects';
 
 const Home = () => {
   return (
     <div className="container mx-auto">
       <AppBanner />
-
-      <ProjectsProvider>
-        <ProjectsGrid />
-      </ProjectsProvider>
+      <Projects />
 
       <div className="mt-8 sm:mt-10 flex justify-center">
         <Link

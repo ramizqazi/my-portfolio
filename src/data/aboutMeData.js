@@ -44,7 +44,7 @@ export const certificationsData = [
 		title: 'Back End Development and APIs',
 		link: 'https://www.freecodecamp.org/certification/ramizqazi/back-end-development-and-apis',
 		image: 'https://d540vms5r2s2d.cloudfront.net/mad/uploads/mad_blog_5db041379523b1571832119.gif',
-		description: ' This course guides you through building powerful server-side applications using Node.js, leveraging the flexibility of Express for robust routing and middleware. Explore MongoDB as a NoSQL database, mastering the integration of data storage into your applications. From handling HTTP requests to designing scalable APIs, this course equips you with the skills to create dynamic and efficient Back End systems. Elevate your development expertise by mastering the key technologies driving modern web applications.'
+		description: 'This course guides you through building powerful server-side applications using Node.js, leveraging the flexibility of Express for robust routing and middleware. Explore MongoDB as a NoSQL database, mastering the integration of data storage into your applications. From handling HTTP requests to designing scalable APIs, this course equips you with the skills to create dynamic and efficient Back End systems. Elevate your development expertise by mastering the key technologies driving modern web applications.'
 	},
 	{
 		id: 5,

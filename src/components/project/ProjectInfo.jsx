@@ -1,10 +1,6 @@
-'use client';
-import {useContext} from 'react';
-import SingleProjectContext from '@/context/SingleProjectContext';
 
-const ProjectInfo = () => {
-  const singleProjectData = useContext(SingleProjectContext);
-  const paraBreak = singleProjectData?.description.indexOf('{break}');
+const ProjectInfo = ({ project }) => {
+  const paraBreak = project?.description.indexOf('{break}');
 
   return (
     <div className="block sm:flex gap-0 sm:gap-10 mt-14">
@@ -15,7 +11,7 @@ const ProjectInfo = () => {
             Tools & Technologies
           </p>
           <p className="font-general-regular text-primary-dark dark:text-ternary-light">
-            {singleProjectData?.technologies.join(', ')}
+            {project?.technologies.join(', ')}
           </p>
         </div>
         {/* Single project client details */}
@@ -24,7 +20,7 @@ const ProjectInfo = () => {
             Key Features
           </p>
           <ul className="list-disc">
-            {singleProjectData?.features.map(f => (
+            {project?.features.map(f => (
               <li
                 key={f}
                 className="font-general-regular text-ternary-dark dark:text-ternary-light">
@@ -40,16 +36,16 @@ const ProjectInfo = () => {
           About App
         </p>
         <p className="font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light">
-          {singleProjectData?.description.slice(
+          {project?.description.slice(
             0,
             paraBreak > -1 ? paraBreak : undefined,
           )}
         </p>
         {paraBreak > -1 && (
           <p className="font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light">
-            {singleProjectData?.description.slice(
+            {project?.description.slice(
               paraBreak + 7,
-              singleProjectData?.description.length - 1,
+              project?.description.length - 1,
             )}
           </p>
         )}

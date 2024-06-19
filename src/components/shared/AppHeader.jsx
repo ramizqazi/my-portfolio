@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from 'react';
 import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
 import Link from 'next/link';
@@ -48,18 +48,18 @@ const AppHeader = () => {
 				<div className="flex justify-between items-center px-4 sm:px-0">
 					<div>
 						<Link href="/">
-						<motion.h1
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1 }}
-							transition={{
-								ease: 'easeInOut',
-								duration: 0.9,
-								delay: 0.1,
-							}}
-							className="font-general-semibold text-xl lg:text-3xl  text-center sm:text-left text-ternary-dark dark:text-primary-light"
-						>
-							Ramiz .
-						</motion.h1>
+							<motion.h1
+								initial={{ opacity: 0 }}
+								animate={{ opacity: 1 }}
+								transition={{
+									ease: 'easeInOut',
+									duration: 0.9,
+									delay: 0.1,
+								}}
+								className="font-general-semibold text-xl lg:text-3xl  text-center sm:text-left text-ternary-dark dark:text-primary-light"
+							>
+								Ramiz .
+							</motion.h1>
 						</Link>
 					</div>
 

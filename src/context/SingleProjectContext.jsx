@@ -1,17 +1,16 @@
 'use client';
-import {createContext} from 'react';
-import {usePathname} from 'next/navigation';
-import {InfinitySpin} from 'react-loader-spinner';
+import { createContext } from 'react';
+import { usePathname } from 'next/navigation';
+import { InfinitySpin } from 'react-loader-spinner';
 
-import {useGetProjectById} from '../../sanity/lib/queries';
+import { useGetProjectById } from '../../sanity/lib/queries';
 
 const SingleProjectContext = createContext();
 
-export const SingleProjectProvider = ({children}) => {
-  const pathname = usePathname();
-  const idMatch = pathname.match(/\/projects\/([^/]+)/);
-  const id = idMatch?.[1];
-  const {data, isLoading} = useGetProjectById(id);
+export const SingleProjectProvider = ({ children }) => {
+  const params = useParams()
+  const id = params;
+  const { data, isLoading } = useGetProjectById(id);
 
   return (
     <SingleProjectContext.Provider value={data}>

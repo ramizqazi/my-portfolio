@@ -1,11 +1,11 @@
 'use client';
 const selectOptions = ['Web Application', 'Mobile Application', 'UI Development'];
 
-const ProjectsFilter = ({setSelectProject}) => {
+const ProjectsCategoryFilter = ({ setCategory }) => {
   return (
     <select
       onChange={e => {
-        setSelectProject(e.target.value);
+        setCategory(e.target.value);
       }}
       className="font-general-medium 
                 px-4
@@ -35,4 +35,4 @@ const ProjectsFilter = ({setSelectProject}) => {
   );
 };
 
-export default ProjectsFilter;
+export default ProjectsCategoryFilter;

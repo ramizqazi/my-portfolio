@@ -1,22 +1,18 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
-import {useContext, useState} from 'react';
+import { useState } from 'react';
 import ImageViewer from 'react-simple-image-viewer';
-import SingleProjectContext from '../../context/SingleProjectContext';
 
-import {urlForImage} from '../../../sanity/lib/image';
+import { urlForImage } from '../../../sanity/lib/image';
+import Image from 'next/image';
 
-const ProjectGallery = () => {
+const ProjectGallery = ({ project }) => {
   const [selectedImg, setSelectedImg] = useState(null);
-  const singleProjectData = useContext(SingleProjectContext);
-
-  const images = singleProjectData?.images?.map(img => urlForImage(img)?.url());
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
-      {images?.map((img, index) => {
+      {project?.images?.map((img, index) => {
         return (
-          <img
+          <Image
             key={img}
             src={urlForImage(img)?.url()}
             width="500"
@@ -31,7 +27,7 @@ const ProjectGallery = () => {
       })}
       {!!selectedImg && (
         <ImageViewer
-          src={images}
+          src={project?.images}
           currentIndex={selectedImg - 1}
           onClose={() => setSelectedImg(null)}
           disableScroll={false}

@@ -1,8 +1,8 @@
 'use client';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import {urlForImage} from '../../../sanity/lib/image';
+import { urlForImage } from '../../../sanity/lib/image';
 
 const animation = {
   hidden: {
@@ -19,16 +19,17 @@ const animation = {
   },
 };
 
-const ProjectSingle = ({id, title, category, image}) => {
+const ProjectSingle = ({ id, title, category, image }) => {
   return (
     <motion.div initial="hidden" whileInView="show" variants={animation}>
-      <Link href={`/projects/${id}`} aria-label="Single Project">
+      <Link href={`/projects/${id}`}>
         <div className="rounded-xl shadow-lg h-full hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
           <div>
             <Image
               src={urlForImage(image)?.url()}
               width="600"
               height="200"
+              priority={true}
               className="rounded-t-xl border-none"
               alt="Single Project"
             />

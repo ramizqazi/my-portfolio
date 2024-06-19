@@ -1,21 +1,32 @@
 'use client';
-import {useContext} from 'react';
-import {FiSearch} from 'react-icons/fi';
+import { useEffect, useState } from 'react';
+import { FiSearch } from 'react-icons/fi';
 import ProjectSingle from './ProjectSingle';
-import {ProjectsContext} from '../../context/ProjectsContext';
-import ProjectsFilter from './ProjectsFilter';
+import ProjectsCategoryFilter from './ProjectsCategoryFilter';
 
-const ProjectsGrid = () => {
-  const {
-    projects,
-    searchProject,
-    setSearchProject,
-    searchProjectsByTitle,
-    selectProject,
-    setSelectProject,
-    selectProjectsByCategory,
-  } = useContext(ProjectsContext);
-  
+const ProjectsGrid = ({ projects }) => {
+  const [query, setQuery] = useState("");
+  const [category, setCategory] = useState("");
+  const [filteredProjects, setFilteredProjects] = useState(projects);
+
+  useEffect(() => {
+    let filtered = projects;
+
+    if (query) {
+      filtered = filtered.filter(project =>
+        project.title.toLowerCase().includes(query.toLowerCase())
+      );
+    }
+
+    if (category) {
+      filtered = filtered.filter(project => project.category === category);
+    }
+
+    setFilteredProjects(filtered);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [query, category, projects]);
+
+
   return (
     <section className="py-5 sm:py-10 mt-5 sm:mt-10">
       <div className="text-center">
@@ -32,8 +43,8 @@ const ProjectsGrid = () => {
             text-sm
             sm:text-sm
             mb-3">
-         NOTE: The Projects listed here are all client projects, not practice/learning projects. 
-        <br />These are some of the projects I was allowed to list in my portfolio by my company.
+          NOTE: The Projects listed here are all client projects, not practice/learning projects.
+          <br />These are some of the projects I was allowed to list in my portfolio by my company.
         </h3>
         <h3
           className="font-general-regular 
@@ -62,26 +73,9 @@ const ProjectsGrid = () => {
             </span>
             <input
               onChange={e => {
-                setSearchProject(e.target.value);
+                setQuery(e.target.value)
               }}
-              className="font-general-medium 
-                pl-3
-                w-full
-                sm:w-auto
-                pr-1
-                sm:px-4
-                py-2
-                border 
-                border-gray-200
-                dark:border-secondary-dark
-                rounded-lg
-                text-sm
-                sm:text-md
-                bg-secondary-light
-                dark:bg-ternary-dark
-                text-primary-dark
-                dark:text-ternary-light
-                "
+              className="font-general-medium  pl-3 w-full sm:w-auto pr-1 sm:px-4 py-2 border  border-gray-200 dark:border-secondary-dark rounded-lg text-sm sm:text-md bg-secondary-light dark:bg-ternary-dark text-primary-dark dark:text-ternary-light"
               id="name"
               name="name"
               type="search"
@@ -91,39 +85,19 @@ const ProjectsGrid = () => {
             />
           </div>
 
-          <ProjectsFilter setSelectProject={setSelectProject} />
+          <ProjectsCategoryFilter setCategory={setCategory} />
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
-        {selectProject
-          ? selectProjectsByCategory.map(project => (
-              <ProjectSingle
-                id={project._id}
-                title={project.title}
-                category={project.category}
-                image={project.images && project.images[0]}
-                key={project._id}
-              />
-            ))
-          : searchProject
-          ? searchProjectsByTitle.map(project => (
-              <ProjectSingle
-                id={project._id}
-                title={project.title}
-                category={project.category}
-                image={project.images && project.images[0]}
-                key={project._id}
-              />
-            ))
-          : projects.map(project => (
-              <ProjectSingle
-                id={project._id}
-                title={project.title}
-                category={project.category}
-                image={project.images && project.images[0]}
-                key={project._id}
-              />
-            ))}
+        {filteredProjects.map(project => (
+          <ProjectSingle
+            id={project._id}
+            title={project.title}
+            category={project.category}
+            image={project.images && project.images[0]}
+            key={project._id}
+          />
+        ))}
       </div>
     </section>
   );

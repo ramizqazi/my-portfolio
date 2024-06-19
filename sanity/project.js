@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 export default {
   name: 'project',
   title: 'Project',
@@ -17,7 +18,7 @@ export default {
       name: 'images',
       title: 'Images',
       type: 'array',
-      of: [{type: 'image'}],
+      of: [{ type: 'image' }],
     },
     {
       name: 'service',
@@ -38,13 +39,13 @@ export default {
       name: 'features',
       title: 'Features',
       type: 'array',
-      of: [{type: 'string'}],
+      of: [{ type: 'string' }],
     },
     {
       name: 'technologies',
       title: 'Technologies',
       type: 'array',
-      of: [{type: 'string'}],
+      of: [{ type: 'string' }],
     },
   ],
 };

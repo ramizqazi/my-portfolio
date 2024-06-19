@@ -2,17 +2,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { FiArrowDownCircle } from 'react-icons/fi';
 
-// import HeroImg from '../../images/hero-img.png';
-// import developerLight from '../../images/developer.svg';
-// import developerDark from '../../images/developer-dark.svg';
 import developer from '../../images/developer-animation.svg';
-import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 
 const AppBanner = () => {
-	const [activeTheme] = useThemeSwitcher();
-
 	return (
 		<motion.section
 			initial={{ opacity: 0 }}
@@ -54,7 +47,7 @@ const AppBanner = () => {
 			>
 				<Image
 					className='img'
-					style={{width: '100%'}}
+					style={{ width: '100%' }}
 					src={
 						developer
 					}
