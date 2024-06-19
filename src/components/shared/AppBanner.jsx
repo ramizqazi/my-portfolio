@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 import developer from '../../../assets/images/developer-animation.svg';
+import Button from '../reusable/Button';
 
 const AppBanner = () => {
 	return (
@@ -11,7 +12,8 @@ const AppBanner = () => {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
-			className="flex flex-col sm:justify-between items-center sm:flex-row mt-12 md:mt-2"
+			className="flex flex-col sm:justify-between items-center sm:flex-row"
+			style={{ height: '80vh' }}
 		>
 			<div className="w-full md:w-1/3 text-left">
 				<motion.h1
@@ -38,6 +40,15 @@ const AppBanner = () => {
 				>
 					A Font-End Developer & Design Enthusiast
 				</motion.p>
+				<a href='https://drive.google.com/file/d/1HcJFeShvcQENA3Qw8uz3LDC1lqu2bF8S/view?usp=sharing' target='_blank'>
+					<div
+						className="mt-4  text-md font-general-medium text-center bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-3 py-2.5 duration-300"
+						aria-label="Download Resume"
+						style={{ width: '155px' }}
+					>
+						<Button title="Download Resume" />
+					</div>
+				</a>
 			</div>
 			<motion.div
 				initial={{ opacity: 0, y: -180 }}
