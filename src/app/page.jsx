@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import AppBanner from '../components/shared/AppBanner';
 import Button from '../components/reusable/Button';
 import Projects from '../components/projects';

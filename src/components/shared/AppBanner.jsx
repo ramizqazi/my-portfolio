@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-import developer from '../../images/developer-animation.svg';
+import developer from '../../../assets/images/developer-animation.svg';
 
 const AppBanner = () => {
 	return (

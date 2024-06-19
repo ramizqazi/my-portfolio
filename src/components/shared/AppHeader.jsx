@@ -1,13 +1,13 @@
 "use client";
-import { useState } from 'react';
-import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
 import Link from 'next/link';
-import useThemeSwitcher from '../../hooks/useThemeSwitcher';
-import HireMeModal from '../HireMeModal';
-import logoLight from '../../images/logo-light.svg';
-import logoDark from '../../images/logo-dark.svg';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
+
+import HireMeModal from '../HireMeModal';
+import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 import Button from '../reusable/Button';
+
 
 const AppHeader = () => {
 	const [showMenu, setShowMenu] = useState(false);
@@ -65,14 +65,15 @@ const AppHeader = () => {
 
 					{/* Theme switcher small screen */}
 					<div
+						suppressHydrationWarning
 						onClick={() => setTheme(activeTheme)}
 						aria-label="Theme Switcher"
 						className="block sm:hidden ml-0 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
 					>
 						{activeTheme === 'dark' ? (
-							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
+							<FiMoon suppressHydrationWarning className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
 						) : (
-							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
+							<FiSun suppressHydrationWarning className="text-gray-200 hover:text-gray-50 text-xl" />
 						)}
 					</div>
 
@@ -178,14 +179,15 @@ const AppHeader = () => {
 
 					{/* Theme switcher large screen */}
 					<div
+						suppressHydrationWarning
 						onClick={() => setTheme(activeTheme)}
 						aria-label="Theme Switcher"
 						className="ml-8 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
 					>
 						{activeTheme === 'dark' ? (
-							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
+							<FiMoon suppressHydrationWarning className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
 						) : (
-							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
+							<FiSun suppressHydrationWarning className="text-gray-200 hover:text-gray-50 text-xl" />
 						)}
 					</div>
 				</div>
