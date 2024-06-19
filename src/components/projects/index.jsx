@@ -1,7 +1,7 @@
 import ProjectsGrid from "./ProjectsGrid";
 
 const getProjects = async () => {
-  const response = await fetch('http://localhost:3000/api/projects', { method: 'GET' });
+  const response = await fetch('https://my-portfolio-4xiyo1ux4-ramizqazis-projects.vercel.app/api/projects', { method: 'GET' });
 
   return response.json();
 };
