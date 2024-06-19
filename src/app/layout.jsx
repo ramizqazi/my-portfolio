@@ -1,4 +1,3 @@
-
 import './main.css';
 import './globals.css';
 import { Suspense } from 'react';
@@ -16,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className='dark'>
       <body>
         <div className="bg-secondary-light dark:bg-primary-dark transition duration-300">
           <AppHeader />
